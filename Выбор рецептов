@@ -1,0 +1,16 @@
+m = int(input())
+products = set()
+ingredients = set()
+for i in range(m):
+    product = input()
+    products.add(product)
+n = int(input())
+for i in range(n):
+    recipe, kolvo = input().split()
+    kolvo = int(kolvo)
+    for j in range(kolvo):
+        ingredient = input()
+        ingredients.add(ingredient)
+    if ingredients <= products:
+        print(recipe)
+    ingredients = set()
